@@ -6,32 +6,31 @@
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
-               BackgroundColor="Pink"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
                VerticalOptions="Center"
                HeightRequest="64" />
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
-                     Margin="20"
+                     Margin="{StaticResource PageMargin}"
                      Spacing="20">
             <Label FontSize="22">
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
                             <Span Text="Notes"
+                                  TextColor="{StaticResource PrimaryColor}"
                                   FontAttributes="Bold"
-                                  FontSize="22" 
-                                  TextColor="Black"/>
-                            <Span Text=" v1.0" 
-                                  TextColor="Black"/>
+                                  FontSize="22" />
+                            <Span Text=" v1.0"
+                                  TextColor="{StaticResource PrimaryColor}"/>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
             <Label Text="This app is written in XAML and C# with the Xamarin Platform." 
-                   TextColor="gray"/>
+                   TextColor="{StaticResource PrimaryColor}"/>
             <Button Text="Learn more"
-                    TextColor="Gray"
-                    BackgroundColor="Pink"
                     Clicked="OnButtonClicked" />
         </StackLayout>
     </Grid>
