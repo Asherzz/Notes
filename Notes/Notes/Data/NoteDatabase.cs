@@ -23,7 +23,6 @@ namespace Notes.Data
 
         public Task<Note> GetNoteAsync(int id)
         {
-            // Get a specific note.
             return database.Table<Note>()
                             .Where(i => i.ID == id)
                             .FirstOrDefaultAsync();
@@ -33,19 +32,16 @@ namespace Notes.Data
         {
             if (note.ID != 0)
             {
-                // Update an existing note.
                 return database.UpdateAsync(note);
             }
             else
             {
-                // Save a new note.
                 return database.InsertAsync(note);
             }
         }
 
         public Task<int> DeleteNoteAsync(Note note)
         {
-            // Delete a note.
             return database.DeleteAsync(note);
         }
     }

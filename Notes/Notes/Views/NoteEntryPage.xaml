@@ -4,14 +4,13 @@
              x:Class="Notes.Views.NoteEntryPage"
              Title="Note Entry">
     <ContentPage.Resources>
-        <!-- Implicit styles -->
+
         <Style TargetType="{x:Type Editor}">
             <Setter Property="BackgroundColor"
                     Value="{StaticResource AppBackgroundColor}" />
         </Style>
     </ContentPage.Resources>
 
-    <!-- Layout children vertically -->
     <StackLayout Margin="{StaticResource PageMargin}">
         <Editor Placeholder="Enter your note"
                 PlaceholderColor="{StaticResource PrimaryColor}"
@@ -19,7 +18,7 @@
                 TextColor="{StaticResource PrimaryColor}"
                 HeightRequest="100" />
         <Grid ColumnDefinitions="*,*">
-            <!-- Layout children in two columns -->
+
             <Button Text="Save"
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"

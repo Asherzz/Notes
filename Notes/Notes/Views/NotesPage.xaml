@@ -5,7 +5,6 @@
              Title="Notes">
 
     <ContentPage.Resources>
-        <!-- Define a visual state for the Selected state of the CollectionView -->
         <Style TargetType="StackLayout">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -22,14 +21,11 @@
             </Setter>
         </Style>
     </ContentPage.Resources>
-
-    <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
                      Clicked="OnAddClicked" />
     </ContentPage.ToolbarItems>
 
-    <!-- Display notes in a list -->
     <CollectionView x:Name="collectionView"
                     Margin="{StaticResource PageMargin}"
                     SelectionMode="Single"
@@ -38,7 +34,6 @@
             <LinearItemsLayout Orientation="Vertical"
                                ItemSpacing="10" />
         </CollectionView.ItemsLayout>
-        <!-- Define the appearance of each item in the list -->
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>

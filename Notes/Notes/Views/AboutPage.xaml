@@ -3,14 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
              Title="About">
-    <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
-               BackgroundColor="{StaticResource AppPrimaryColor}"
-               Opacity="0.85"
-               VerticalOptions="Center"
-               HeightRequest="64" />
-        <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
                      Margin="{StaticResource PageMargin}"
                      Spacing="20">
@@ -28,9 +21,9 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." 
+            <Label Text="Блиииин вот бы пятерочку..........." 
                    TextColor="{StaticResource PrimaryColor}"/>
-            <Button Text="Learn more"
+            <Button Text="The best programmer is here"
                     Clicked="OnButtonClicked" />
         </StackLayout>
     </Grid>

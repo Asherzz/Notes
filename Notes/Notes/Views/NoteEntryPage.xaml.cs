@@ -20,7 +20,6 @@ namespace Notes.Views
         {
             InitializeComponent();
 
-            // Set the BindingContext of the page to a new Note.
             BindingContext = new Note();
         }
 
@@ -29,7 +28,6 @@ namespace Notes.Views
             try
             {
                 int id = Convert.ToInt32(itemId);
-                // Retrieve the note and set it as the BindingContext of the page.
                 Note note = await App.Database.GetNoteAsync(id);
                 BindingContext = note;
             }
@@ -48,7 +46,6 @@ namespace Notes.Views
                 await App.Database.SaveNoteAsync(note);
             }
 
-            // Navigate backwards
             await Shell.Current.GoToAsync("..");
         }
 
@@ -57,7 +54,6 @@ namespace Notes.Views
             var note = (Note)BindingContext;
             await App.Database.DeleteNoteAsync(note);
 
-            // Navigate backwards
             await Shell.Current.GoToAsync("..");
         }
     }
